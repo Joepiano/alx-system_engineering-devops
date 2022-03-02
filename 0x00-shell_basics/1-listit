@@ -1,2 +1,3 @@
-#!bin/bash
+#!/bin/bash
 ls
+>>>>>>> b4435860b79754edb74dcecdf5b7c98ca40aba62
