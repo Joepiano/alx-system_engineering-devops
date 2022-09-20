@@ -18,6 +18,6 @@ This project is about learning how to connect on a server using ssh.
 - Your Ubuntu Vagrant machine has an SSH configuration file for the local SSH client, let’s configure it to our needs so that you can connect to a server without typing a password. Share your SSH client configuration in your answer file.
 # <a href = "https://github.com/rioles/alx-system_engineering-devops/blob/master/0x0B-ssh/100-puppet_ssh_config.pp"> Client Configuration with puppet </a>
 
-#Author 
+# Author 
 - Joepiano
 
