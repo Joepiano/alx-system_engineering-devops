@@ -42,7 +42,7 @@ frontend www-http
          default_backend web-server
 
 frontend www-https
-         bind *:443 ssl crt /etc/haproxy/certs/realjoepiano.tech.pem
+         bind *:443 ssl crt /etc/haproxy/haproxy/realjoepiano.tech.pem
          reqadd X-Forwarded-Proto:\ https
          default_backend web-server
 
