@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-""" Export to CSV  """
+""" Export to JSON  """
 
 if __name__ == "__main__":
-    import csv
+    import json
     from requests import get
     from sys import argv, exit
 
@@ -29,13 +29,18 @@ if __name__ == "__main__":
         USER_ID = id
         USERNAME = js_user[0].get('username')
 
-        with open(id + '.csv', 'w', newline='') as csvfile:
-            spamwriter = csv.writer(csvfile, delimiter=',',
-                                    quotechar='"', quoting=csv.QUOTE_ALL)
-            for todo in js_todo:
-                TASK_COMPLETED_STATUS = todo.get("completed")
-                TASK_TITLE = todo.get('title')
-                spamwriter.writerow([USER_ID,
-                                     USERNAME,
-                                     TASK_COMPLETED_STATUS,
-                                     TASK_TITLE])
+        js_list = []
+        for todo in js_todo:
+            TASK_COMPLETED_STATUS = todo.get("completed")
+            TASK_TITLE = todo.get('title')
+
+            dic = {"task": TASK_TITLE,
+                   "completed": TASK_COMPLETED_STATUS,
+                   "username": USERNAME}
+
+            js_list.append(dic)
+
+        data = {USER_ID: js_list}
+
+        with open(id + '.json', 'w', newline='') as jsonfile:
+            json.dump(data, jsonfile)
