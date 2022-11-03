@@ -1,4 +1,3 @@
-
 # Web Stack debugging fix typo in config file
 exec { 'fix-wordpress':
   environment => ['DIR=/var/www/html/wp-settings.php',
