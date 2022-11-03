@@ -29,4 +29,3 @@ def number_of_subscribers(subreddit):
             return sub_count
 
     return 0
-
