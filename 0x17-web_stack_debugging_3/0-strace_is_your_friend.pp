@@ -1,3 +1,4 @@
+
 # Web Stack debugging fix typo in config file
 exec { 'fix-wordpress':
   environment => ['DIR=/var/www/html/wp-settings.php',
@@ -7,5 +8,3 @@ exec { 'fix-wordpress':
   path        => ['/usr/bin', '/bin'],
   returns     => [0, 1]
 }
-Footer
-© 2022 GitHub, Inc.
